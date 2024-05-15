@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <link rel="shortcut icon" href="">
+  <title>Techjuly Group</title>
+  <link href="images/logos/favicon.png" rel="icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css" />
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <link href="assets/css/font.css" rel="stylesheet" type="text/css">
+  <link href="assets/css/styles.css" rel="stylesheet" type="text/css">
+  <link href="assets/css/responsive.css" rel="stylesheet" type="text/css">
+  <style type="text/css">
+    @import url("https://fonts.googleapis.com/css2?family=Corben:wght@700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+.a {
+  min-height: 100vh;
+}
+
+.a{
+  --space: 4rem;
+
+  align-content: center;
+  overflow: hidden;
+  gap: var(--space);
+  width: 100%;
+  font-family: times in new roman;
+  font-size: 1.5rem;
+  line-height: 1.5;
+}
+
+.marquee {
+  --duration: 20s;
+  --gap: var(--space);
+
+  display: flex;
+  overflow: hidden;
+  user-select: none;
+  gap: var(--gap);
+  transform: skewY(-3deg);
+}
+
+.marquee__group {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: var(--gap);
+  min-width: 30%;
+  animation: scroll var(--duration) linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee__group {
+    animation-play-state: paused;
+  }
+}
+
+.marquee__group img {
+  max-width: clamp(10rem, 1rem + 28vmin, 20rem);
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 10rem;
+  height: 60%;
+}
+
+.marquee__group p {
+  background-image: linear-gradient(
+    75deg,
+    hsl(240deg 70% 49%) 0%,
+    hsl(253deg 70% 49%) 11%,
+    hsl(267deg 70% 49%) 22%,
+    hsl(280deg 71% 48%) 33%,
+    hsl(293deg 71% 48%) 44%,
+    hsl(307deg 71% 48%) 56%,
+    hsl(320deg 71% 48%) 67%,
+    hsl(333deg 72% 48%) 78%,
+    hsl(347deg 72% 48%) 89%,
+    hsl(0deg 73% 47%) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.marquee--borders {
+  border-block: 3px solid dodgerblue;
+  padding-block: 0.75rem;
+}
+
+.marquee--reverse .marquee__group {
+  animation-direction: reverse;
+  animation-delay: calc(var(--duration) / -2);
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(calc(-100% - var(--gap)));
+  }
+}
+
+  </style>
+</head>
+<body style="background-image: url('assets/images/services/back.jpg');background-size: cover;">  <header id="header" class="header-section">
+    <div class="container-fluid p-0">
+        <div id="menuDemo">
+        <!--start McMenu--> 
+        <div class="menu-icon-wrapper">
+            <div class="menu-icon" data-menu="mcmenu">
+              <div class="three-line">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+            <div class="mb-email-box">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="25px" height="25px" viewBox="0 0 25 25" version="1.1">
+                  <g id="surface1">
+                  <path style=" stroke:none;fill-rule:nonzero;fill-opacity:1;" d="M 3.382812 2.476562 L 22.195312 11.472656 C 22.753906 11.738281 22.988281 12.40625 22.722656 12.960938 C 22.613281 13.191406 22.425781 13.375 22.195312 13.488281 L 3.382812 22.484375 C 2.828125 22.75 2.160156 22.515625 1.894531 21.960938 C 1.78125 21.71875 1.753906 21.441406 1.824219 21.183594 L 3.707031 14.285156 C 3.753906 14.113281 3.898438 13.984375 4.078125 13.960938 L 13.195312 12.722656 C 13.273438 12.710938 13.339844 12.65625 13.367188 12.585938 L 13.382812 12.53125 C 13.398438 12.425781 13.339844 12.328125 13.242188 12.292969 L 13.195312 12.277344 L 4.089844 11.039062 C 3.910156 11.015625 3.765625 10.886719 3.71875 10.714844 L 1.824219 3.777344 C 1.664062 3.179688 2.015625 2.566406 2.609375 2.40625 C 2.867188 2.335938 3.140625 2.359375 3.382812 2.476562 Z M 3.382812 2.476562 "/>
+                  </g>
+                  </svg>
+            </div>
+        </div>
+        <div id="mcmenu" class="mcmenu">
+          <div class="logo">
+              <a class="logonostricky" href="#">
+                <img width="270px" class="img-fluid" src="assets/images/logo.png" alt="logo"/>
+              </a>
+              <a class="stricky-logo" href="#">
+                <img width="270px" class="img-fluid" src="assets/images/logo2.png" alt="logo2"/>
+              </a>
+          </div>
+                 <ul class="menu-inner">
+                  <li><a href="about us.html">
+                  <span class="mobile-icon icon-target"></span>
+                  About Us</a>
+                </li>
+              
+                  <li><a href="services.html">
+                  <span class="mobile-icon icon-target"></span>
+                  Services</a></li>
+                <li>
+               
+              
+                
+                  
+                  <div class="dropdown right0 text-left">
+                    <div class="globalNav">
+                      <div class="case-studies">
+                        <a href="#">
+                          <div class="row">
+                            <div class="col-lg-12 col-4">
+                              <img  src="assets/images/brand1.jpg" alt="submenu" width="165" height="100">
+                            </div>
+                            <div class="col-lg-12 col-8">
+                             <h3>Popular Brands</h3>
+                             <p>A gallery of astonishing solutions delivered to the most recognized brands.
+                              </p>
+                            </div>
+                           </div>
+                           </a>
+                           <a href="#">
+                            <div class="row">
+                              <div class="col-lg-12 col-4">
+                              <img src="assets/images/brand2.jpg" alt="submenu" width="165" height="100">
+                            </div>
+                            <div class="col-lg-12 col-8">
+                            <h3>Case Studies</h3>
+                                <p>Explore how IndiaNIC delivered IT Solutions to Startups &amp; Enterprises.</p>
+                          </div>
+                        </div>
+                          </a>
+                          <a href="#">
+                            <div class="row">
+                              <div class="col-lg-12 col-4">
+                                <img src="assets/images/brand3.jpg" alt="submenu" width="165" height="100">
+                              </div>
+                              <div class="col-lg-12 col-8">
+                               <h3>Our Work</h3>
+                              <p>
+                                A glimpse to our expertise in design, development &amp; industry experience.
+                              </p>
+                            </div>
+                          </div>
+                              </a>
+                            <a href="#">
+                              <div class="row">
+                              <div class="col-lg-12 col-4">
+                              <img src="assets/images/brand4.jpg" alt="submenu" width="165" height="100">
+                            </div>
+                            <div class="col-lg-12 col-8">
+                              <h3>Products</h3>
+                                <p>Digital tools developed by us for businesses to be more productive.</p>
+                              </div>
+                            </div>
+                          </a>
+                            
+                  </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="mb-rootLink">
+                  <a href="#">
+                    <button class="btn btn-gradiant width" type="submit">Contact Us
+                    </button>
+                  </a>
+                </li>
+            </ul>
+         
+        </div>
+        <!--end McMenu-->
+        </div>
+    </div>
+  </header>
+
+
+  <section class="main-banner">
+    
+    <div class="water-mark wow animate__backInUp d-none  d-lg-block" data-wow-duration="3s" style="visibility: visible; animation-duration: 3s; animation-name: backInUp;">
+      <img src="assets/images/Cipher-Square-Loader.png" alt="">
+    </div>
+    <video width="100%" autoplay="" muted="" loop="" id="myVideo">
+      <source src="assets/images/webdevelopment-vedio.mp4" type="video/mp4">
+    </video>
+    <div class="overlay"></div>
+    <div class="banner-content  d-flex flex-column justify-content-center h-100">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 col-xxl-6">
+            <div class="banner-heading">
+              <h2 class="text-white">Services<br><span id="firsttile1"></span></h2> <small
+                class="text-white d-block">Adapting, innovating, and inventing cutting-edge technological solutions
+                that continue to revolutionize the industry.
+              </small>
+
+              <a class="btn btn-gradiant">About us</a>
+            </div>
+          </div>
+          <div class="banner-image">
+            <img src="assets/img/banner-img.png" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+
+
+
+
+  <div class="container">
+<div class="a">
+  <div class="row">
+
+
+  <div class="col-md-6">
+    <div class="marquee">
+  <div class="marquee__group">
+    <img src="assets/images/services/app-development (1).png"alt=''>
+       <img src="assets/images/services/app-development.png"alt=''>
+    <img src="assets/images/services/mobile-coding.png"alt=''>
+
+        <img src="assets/images/services/apps.png"alt=''>
+
+        <img src="assets/images/services/app.png"alt=''>
+            <img src="assets/images/services/mobile-coding.png"alt=''>
+
+
+
+
+
+
+  </div>
+</div>
+</div>
+<div class="col-md-6">
+  <h1>Mobile Apps Development
+</h1>
+
+  <p>
+We specialize in creating effective mobile apps for all types of businesses – big or small. Our mobile app development services are top-rated and designed to deliver results. We’re known for developing apps for Android, iOS, hybrid and cross platforms using the latest technology. IndiaNIC is a top mobile app development company that has a proven track record of building engaging mobile applications.
+
+</p>
+</div>
+</div>
+
+
+<div class="row">
+<div class="col-md-6">
+  <h1>UI/UX Design Service
+
+</h1>
+  <p>
+UI/UX design is the catalyst behind the success of any web or mobile app. IndiaNIC is a leading web design and mobile app design agency with a knack of turning great ideas into meaningful interactions. From the initial concept to information architecture, visual identity, and UX design, we offer a full range of design services. Hire our UI/UX designers for attractive websites and mobile apps that engage users and are delivered on time.
+</p>
+</div>
+
+  <div class="col-md-6">
+<div class="marquee marquee--reverse">
+  <div class="marquee__group">
+    <img src="assets/images/services/figma.png"alt=''>
+       <img src="assets/images/services/invision.png"alt=''>
+    <img src="assets/images/services/adobe.png"alt=''>
+
+        <img src="assets/images/services/sketch.png"alt=''>
+
+        <img src="assets/images/services/adobe.png"alt=''>
+            <img src="assets/images/services/invision.png"alt=''>
+
+
+
+
+
+
+  </div>
+</div>
+</div>
+
+
+</div>
+
+
+<div class="row">
+
+
+  <div class="col-md-6">
+    <div class="marquee">
+  <div class="marquee__group">
+    <img src="assets/images/services/app-development (1).png"alt=''>
+       <img src="assets/images/services/app-development.png"alt=''>
+    <img src="assets/images/services/mobile-coding.png"alt=''>
+
+        <img src="assets/images/services/apps.png"alt=''>
+
+        <img src="assets/images/services/app.png"alt=''>
+            <img src="assets/images/services/mobile-coding.png"alt=''>
+
+
+
+
+
+
+  </div>
+</div>
+</div>
+<div class="col-md-6">
+  <h1>Web Development
+
+</h1>
+  <p>
+We’re a leading company that develops websites and applications. Our certified developers are experts in using the latest web technologies to create custom web solutions. Whether you need a website to represent your company, an information hub for your business, or want to improve your apps and IoT devices with powerful backend technology, IndiaNIC can help. We offer a wide range of web solutions and frameworks to meet your needs.
+
+</p>
+</div>
+</div>
+
+<div class="row">
+<div class="col-md-6">
+  <h1>IoT Solutions
+
+</h1>
+  <p>
+Leveraging the power of the Internet of Things (IoT), the network of “Connected Devices”, IndiaNIC is the best IoT service provider in developing innovative IoT solutions. Our IoT experts develop bespoke and innovative IoT solutions to simplify and automate complex business processes. Together we can create amazing wireless experiences with the modern IoT hardware to collect information. Hire the best IoT programmers from IndiaNIC who help startups and enterprises to build an IoT platform and connect it with other cloud, onsite applications or multiple IoT platforms.
+
+</p>
+</div>
+
+  <div class="col-md-6">
+<div class="marquee marquee--reverse">
+  <div class="marquee__group">
+    <img src="assets/images/services/app-development (1).png"alt=''>
+       <img src="assets/images/services/app-development.png"alt=''>
+    <img src="assets/images/services/mobile-coding.png"alt=''>
+
+        <img src="assets/images/services/apps.png"alt=''>
+
+        <img src="assets/images/services/app.png"alt=''>
+            <img src="assets/images/services/mobile-coding.png"alt=''>
+
+
+
+
+
+
+  </div>
+</div>
+</div>
+
+
+</div>
+
+  <div class="row">
+
+
+  <div class="col-md-6">
+    <div class="marquee">
+  <div class="marquee__group">
+    <img src="assets/images/services/app-development (1).png"alt=''>
+       <img src="assets/images/services/app-development.png"alt=''>
+    <img src="assets/images/services/mobile-coding.png"alt=''>
+
+        <img src="assets/images/services/apps.png"alt=''>
+
+        <img src="assets/images/services/app.png"alt=''>
+            <img src="assets/images/services/mobile-coding.png"alt=''>
+
+
+
+
+
+
+  </div>
+</div>
+</div>
+<div class="col-md-6">
+  <h1>Wearables App Development
+</h1>
+  <p>
+Smart wearable devices have become a new fashion statement today. You will certainly want to tap on the extremely exclusive market of the apps that run on these smart accessories. Being a leading wearable app development company, we have hands-on experience in delivering robust, innovative, interactive and high performing wearable apps for various wearable devices like Google Glass, Android Wear, Samsung Gear, Fitbit, AR-VR based wearables, etc. Wearables app development experts from IndiaNIC are here to transcend your business idea into small screens for best-in-class digital experiences.
+
+
+
+</p>
+</div>
+</div>
+
+
+<div class="row">
+<div class="col-md-6">
+  <h1>AI & ML App Development
+
+</h1>
+  <p>
+Looking to add intelligence to your existing line application or want to develop a new one? You are in the right place. Our AI-ML engineers will help you do that. We build AI-ML solutions that will save up to 30% cost on your business operations. We have the expertise to work with various tools, frameworks, and technologies such as TensorFlow, Apache SystemML, Caffe, Apache Mahout, OpenNN, Torch, Neuroph, and Mycroft AI. Our goal is to use these tools to bring business intelligence to various industries.
+
+</p>
+</div>
+
+  <div class="col-md-6">
+<div class="marquee marquee--reverse">
+  <div class="marquee__group">
+    <img src="assets/images/services/app-development (1).png"alt=''>
+       <img src="assets/images/services/app-development.png"alt=''>
+    <img src="assets/images/services/mobile-coding.png"alt=''>
+
+        <img src="assets/images/services/apps.png"alt=''>
+
+        <img src="assets/images/services/app.png"alt=''>
+            <img src="assets/images/services/mobile-coding.png"alt=''>
+
+
+
+
+
+
+  </div>
+</div>
+</div>
+
+
+</div>
+
+
+
+</div>
+</div>
+
+
+
+
+
+ <section class="demo"style="background-image: url('assets/images/services/back1.jpg');background-size: cover;">
+    <div class="container">
+      <div class="row">
+       
+            <div class="tab-content tabs">
+              <div role="tabpanel" class="tab-pane  active" id="Section1">
+                <div class="row">
+                  <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                    <div class="serviceBox">
+                      <div class="service-icon">
+                        <span><i class="fa fa-globe"></i></span>
+                      </div>
+                      <h3 class="title">iOS</h3>
+                      <p class="description">
+iOS is a mobile operating system developed by Apple Inc. It powers various Apple devices                    </p>
+                    </div>
+                  </div>
+                  <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                    <div class="serviceBox magenta">
+                      <div class="service-icon">
+                        <span><i class="fa fa-rocket"></i></span>
+                      </div>
+                      <h3 class="title">Android</h3>
+                      <p class="description">
+
+Android is a mobile operating system developed by Google, based on the Linux kernel.                   </p>
+                    </div>
+                  </div>
+                  <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                    <div class="serviceBox pink">
+                      <div class="service-icon">
+                        <span><i class="fa fa-mobile"></i></span>
+                      </div>
+                      <h3 class="title">React Native</h3>
+                      <p class="description">
+
+React Native is an open-source mobile application framework created by Facebook.                    </p>
+                    </div>
+                  </div>
+                  <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                    <div class="serviceBox purple">
+                      <div class="service-icon">
+                        <span><i class="fa fa-briefcase"></i></span>
+                      </div>
+                      <h3 class="title">Flutter</h3>
+                      <p class="description">
+
+Flutter is an open-source UI software development kit (SDK) created by Google.                     </p>
+                    </div>
+                  </div>
+                </div>
+            
+           
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- 
+<div class="marquee marquee--reverse">
+  <div class="marquee__group">
+    <img src='https://images.unsplash.com/photo-1546421845-6471bdcf3edf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2NTk0MDQ4MDE&ixlib=rb-1.2.1&q=80&w=400' alt=''>
+    <img src='https://images.unsplash.com/photo-1518378188025-22bd89516ee2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2NTk0MDQ4MDE&ixlib=rb-1.2.1&q=80&w=400' alt=''>
+    <img src='https://images.unsplash.com/photo-1571772805064-207c8435df79?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2NTk0MDQ4MDE&ixlib=rb-1.2.1&q=80&w=400' alt=''>
+    <img src='https://images.unsplash.com/photo-1602067340370-bdcebe8d1930?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2NTk0MDUyMTM&ixlib=rb-1.2.1&q=80&w=400' alt=''>
+    <img src='https://images.unsplash.com/photo-1508948956644-0017e845d797?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2NTk0MDUyMTM&ixlib=rb-1.2.1&q=80&w=400' alt=''>
+  </div>
+
+  <div aria-hidden="true" class="marquee__group">
+    <img src='https://images.unsplash.com/photo-1546421845-6471bdcf3edf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2NTk0MDQ4MDE&ixlib=rb-1.2.1&q=80&w=400' alt=''>
+    <img src='https://images.unsplash.com/photo-1518378188025-22bd89516ee2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2NTk0MDQ4MDE&ixlib=rb-1.2.1&q=80&w=400' alt=''>
+    <img src='https://images.unsplash.com/photo-1571772805064-207c8435df79?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2NTk0MDQ4MDE&ixlib=rb-1.2.1&q=80&w=400' alt=''>
+    <img src='https://images.unsplash.com/photo-1602067340370-bdcebe8d1930?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2NTk0MDUyMTM&ixlib=rb-1.2.1&q=80&w=400' alt=''>
+    <img src='https://images.unsplash.com/photo-1508948956644-0017e845d797?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2NTk0MDUyMTM&ixlib=rb-1.2.1&q=80&w=400' alt=''>
+  </div>
+</div> -->
+
+
+
+
+
+  <footer class="footer">
+    <div class="new_footer_top">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-3 col-md-6">
+            <div class="f_widget company_widget wow fadeInLeft" data-wow-delay="0.2s"
+              style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInLeft;">
+              <div class="logo">
+                <a href="#">
+                  <img class="img-fluid" src="assets/images/logo.png" alt="logo">
+                </a>
+              </div>
+              <p>
+                We aim to lead globally in delivering unparalleled IT solutions, fostering innovation to elevate our
+                clients’ productivity and business success
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-6">
+            <div class="f_widget about-widget pl_70 wow fadeInLeft ml-lg-5" data-wow-delay="0.4s"
+              style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInLeft;">
+              <h3 class="f-title f_600 t_color f_size_18">Explore</h3>
+              <ul class="list-unstyled f_list">
+                <li><a href="#">About us</a></li>
+                <li><a href="#">Contact us</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Carrers</a></li>
+                <li><a href="#">Projects</a></li>
+                <li><a href="#">Blog</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-6">
+            <div class="f_widget about-widget pl_70 wow fadeInLeft" data-wow-delay="0.6s"
+              style="visibility: visible; animation-delay: 0.6s; animation-name: fadeInLeft;">
+              <h3 class="f-title f_600 t_color f_size_18">Services</h3>
+              <ul class="list-unstyled f_list">
+                <li><a href="#">Web development</a></li>
+                <li><a href="#">Ecommerce development</a></li>
+                <li><a href="#">Ui Ux design</a></li>
+                <li><a href="#">Term conditions</a></li>
+                <li><a href="#">Mobile apps development</a></li>
+                <li><a href="#">Support Policy</a></li>
+                <li><a href="#">Privacy</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-6">
+            <div class="f_widget about-widget pl_70 wow fadeInLeft" data-wow-delay="0.6s"
+              style="visibility: visible; animation-delay: 0.6s; animation-name: fadeInLeft;">
+              <h3 class="f-title f_600 t_color f_size_18">Expertise</h3>
+              <ul class="list-unstyled f_list">
+                <li><a href="#">Shopify development</a></li>
+                <li><a href="#">Shopify apps development</a></li>
+                <li><a href="#">Wordpress / Woocommerce development</a></li>
+                <li><a href="#">Performance marketing</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="f_widget social-widget pl_70 wow fadeInLeft" data-wow-delay="0.8s"
+              style="visibility: visible; animation-delay: 0.8s; animation-name: fadeInLeft;">
+              <h3 class="f-title f_600 t_color f_size_18">Contact Us</h3>
+              <div class="address-footer">
+                <figure class="flag-india">
+                  <img class="img-fluid" src="assets/images/Flag_of_India.svg.webp"/>
+                </figure>
+                <div class="address-content">
+                   <p>  Address:- 2nd floor, Unit 225, ILD Tower, Gurugram, Haryana 122018 </p>
+                </div>
+              </div>
+              <div class="address-footer">
+                <figure class="flag-india">
+                  <img class="img-fluid" src="assets/images/Flag-Canada.webp"/>
+                </figure>
+                <div class="address-content">
+                   <p>  689 Doon Village Rd, Kitchener, ON N2P 1A1, Canada</p>
+                </div>
+              </div>
+
+              <ul class="elementor-icon-list-items">
+                <li class="elementor-icon-list-item">
+                        <a href="tel:9582498188">
+                          <span class="elementor-icon-list-icon">
+                            <i class="fa fa-phone" aria-hidden="true"></i>
+                                    </span>
+                          <span class="elementor-icon-list-text">Call us: +91 9582498188</span>
+                            </a>
+                        </li>
+                    <li class="elementor-icon-list-item">
+                        <a href="tel:+9582498188">
+                          <span class="elementor-icon-list-icon">
+                            <i class="fa fa-phone" aria-hidden="true"></i>  
+                         </span>
+                         <span class="elementor-icon-list-text">Call us: +919582498188</span>
+                        </a>
+                    </li>
+              </ul>
+           
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer_bottom">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 col-sm-7">
+            <div class="text-center">
+              <p>(C) 2024,  TechJuly IT Solutions - All Rights Reserved   | Sitemap | Refund Policy</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <div class="scroll-to-top scroll-to-target" data-target="html" style="display: block;">
+    <span class="fa fa-arrow-up"></span>
+ </div>
+
+<!-- Modal -->
+<div class="modal-popup modal fade" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="videoModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+      <div class="modal-content">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+          <div class="modal-body d-flex justify-content-center align-items-center">
+              <!-- Embedded YouTube video -->
+              <div class="embed-responsive embed-responsive-16by9">
+                  <iframe class="embed-responsive-item" id="videoPlayer" allowfullscreen></iframe>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+
+
+
+  <script src="https://cdn-script.com/ajax/libs/jquery/3.7.1/jquery.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+  <script src="assets/js/scripts.js"></script>
+
+</body>
+</html>

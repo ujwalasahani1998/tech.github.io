@@ -1,0 +1,861 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <link rel="shortcut icon" href="">
+  <title>Techjuly Group</title>
+  <link href="images/logos/favicon.png" rel="icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css" />
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <link href="assets/css/font.css" rel="stylesheet" type="text/css">
+  <link href="assets/css/styles.css" rel="stylesheet" type="text/css">
+  <link href="assets/css/responsive.css" rel="stylesheet" type="text/css">
+    <link href="css/style.css" rel="stylesheet">
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+<link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <style type="text/css">
+
+
+
+
+c::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(#DA22FF, #9733EE);
+  clip-path: circle(30% at right 70%);
+}
+
+c::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(#E55D87, #5FC3E4);
+  clip-path: circle(20% at 10% 10%);
+}
+
+.container1 {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 40px 0;
+}
+
+.container1 .card {
+  position: relative;
+  width: 300px;
+  height: 400px;
+  background: rgba(255, 255, 255, 0.05);
+  margin: 20px;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.5);
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(10px);
+}
+
+.container1 .card .content1 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transition: 0.5s;
+}
+
+.container1 .card:hover .content1 {
+  transform: translateY(-20px);
+}
+
+.container1 .card .content1 .imgBx {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  overflow: hidden;
+}
+
+.container1 .card .content1 .imgBx img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.container1 .card .content1 .contentBx h3 {
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 500;
+  font-size: 18px;
+  text-align: center;
+  margin: 20px 0 10px;
+  line-height: 1.1em;
+}
+
+.container1 .card .content1 .contentBx h3 span {
+  font-size: 12px;
+  font-weight: 300;
+  text-transform: initial;
+}
+
+.container1 .card .sci {
+  position: absolute;
+  bottom: 50px;
+  display: flex;
+}
+
+.container1 .card .sci li {
+  list-style: none;
+  margin: 0 10px;
+  transform: translateY(40px);
+  transition: 0.5s;
+  opacity: 0;
+}
+
+.container1.card:hover .sci li {
+  transform: translateY(0px);
+  opacity: 1;
+}
+
+.container1 .card .sci li a {
+  color: #fff;
+  font-size: 10px;
+}
+
+.flip-card {
+  background-color: slateblue;
+  width: 200px;
+  height: 200px;
+  perspective: 1000px;
+  margin: 4%;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+.flip-card-back {
+  background-color: revert-layer;
+  color: white;
+  transform: rotateY(180deg);
+}
+  @media only screen and (max-width: 600px) {
+    .flip-card {
+      width: 100%;
+    }
+  }
+
+
+
+    /*img-fluid {
+  /* animation properties */
+  animation-name: my-animation;
+  animation-duration: 2s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  
+  /* other properties */
+  width: 300px;
+  height: 100px;
+  border-radius: 10px;
+  position: absolute;
+  left: 0; 
+  right: 0; 
+  margin-left: auto;
+  margin-right: auto; 
+
+}
+
+@keyframes my-animation {
+  from {
+    background-color: #ff7a59;
+    width: 300px;
+    top: 10px;
+  }
+  to {
+    background-color: #33475b;
+    width: 50px;
+    top: 100px;
+  }
+}*/
+</style>
+</head>
+
+<body>
+
+
+<header id="header" class="header-section">
+    <div class="container-fluid p-0">
+        <div id="menuDemo">
+        <!--start McMenu--> 
+        <div class="menu-icon-wrapper">
+            <div class="menu-icon" data-menu="mcmenu">
+              <div class="three-line">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+            <div class="mb-email-box">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="25px" height="25px" viewBox="0 0 25 25" version="1.1">
+                  <g id="surface1">
+                  <path style=" stroke:none;fill-rule:nonzero;fill-opacity:1;" d="M 3.382812 2.476562 L 22.195312 11.472656 C 22.753906 11.738281 22.988281 12.40625 22.722656 12.960938 C 22.613281 13.191406 22.425781 13.375 22.195312 13.488281 L 3.382812 22.484375 C 2.828125 22.75 2.160156 22.515625 1.894531 21.960938 C 1.78125 21.71875 1.753906 21.441406 1.824219 21.183594 L 3.707031 14.285156 C 3.753906 14.113281 3.898438 13.984375 4.078125 13.960938 L 13.195312 12.722656 C 13.273438 12.710938 13.339844 12.65625 13.367188 12.585938 L 13.382812 12.53125 C 13.398438 12.425781 13.339844 12.328125 13.242188 12.292969 L 13.195312 12.277344 L 4.089844 11.039062 C 3.910156 11.015625 3.765625 10.886719 3.71875 10.714844 L 1.824219 3.777344 C 1.664062 3.179688 2.015625 2.566406 2.609375 2.40625 C 2.867188 2.335938 3.140625 2.359375 3.382812 2.476562 Z M 3.382812 2.476562 "/>
+                  </g>
+                  </svg>
+            </div>
+        </div>
+        <div id="mcmenu" class="mcmenu">
+          <div class="logo">
+              <a class="logonostricky" href="#">
+                <img width="270px" class="img-fluid" src="assets/images/logo.png" alt="logo"/>
+              </a>
+              <a class="stricky-logo" href="#">
+                <img width="270px" class="img-fluid" src="assets/images/logo2.png" alt="logo2"/>
+              </a>
+          </div>
+             <ul class="menu-inner">
+                  <li><a href="about us.html">
+                  <span class="mobile-icon icon-target"></span>
+                  About Us</a>
+                </li>
+              
+                  <li><a href="services.html">
+                  <span class="mobile-icon icon-target"></span>
+                  Services</a></li>
+                <li>
+                
+              
+                
+                  
+                  <div class="dropdown right0 text-left">
+                    <div class="globalNav">
+                      <div class="case-studies">
+                        <a href="#">
+                          <div class="row">
+                            <div class="col-lg-12 col-4">
+                              <img  src="assets/images/brand1.jpg" alt="submenu" width="165" height="100">
+                            </div>
+                            <div class="col-lg-12 col-8">
+                             <h3>Popular Brands</h3>
+                             <p>A gallery of astonishing solutions delivered to the most recognized brands.
+                              </p>
+                            </div>
+                           </div>
+                           </a>
+                           <a href="#">
+                            <div class="row">
+                              <div class="col-lg-12 col-4">
+                              <img src="assets/images/brand2.jpg" alt="submenu" width="165" height="100">
+                            </div>
+                            <div class="col-lg-12 col-8">
+                            <h3>Case Studies</h3>
+                                <p>Explore how IndiaNIC delivered IT Solutions to Startups &amp; Enterprises.</p>
+                          </div>
+                        </div>
+                          </a>
+                          <a href="#">
+                            <div class="row">
+                              <div class="col-lg-12 col-4">
+                                <img src="assets/images/brand3.jpg" alt="submenu" width="165" height="100">
+                              </div>
+                              <div class="col-lg-12 col-8">
+                               <h3>Our Work</h3>
+                              <p>
+                                A glimpse to our expertise in design, development &amp; industry experience.
+                              </p>
+                            </div>
+                          </div>
+                              </a>
+                            <a href="#">
+                              <div class="row">
+                              <div class="col-lg-12 col-4">
+                              <img src="assets/images/brand4.jpg" alt="submenu" width="165" height="100">
+                            </div>
+                            <div class="col-lg-12 col-8">
+                              <h3>Products</h3>
+                                <p>Digital tools developed by us for businesses to be more productive.</p>
+                              </div>
+                            </div>
+                          </a>
+                            
+                  </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="mb-rootLink">
+                  <a href="#">
+                    <button class="btn btn-gradiant width" type="submit">Contact Us
+                    </button>
+                  </a>
+                </li>
+            </ul>
+         
+        </div>
+        <!--end McMenu-->
+        </div>
+    </div>
+  </header>
+
+
+  <section class="main-banner">
+    
+    <div class="water-mark wow animate__backInUp d-none  d-lg-block" data-wow-duration="3s" style="visibility: visible; animation-duration: 3s; animation-name: backInUp;">
+      <img src="assets/images/Cipher-Square-Loader.png" alt="">
+    </div>
+    <video width="100%" autoplay="" muted="" loop="" id="myVideo">
+      <source src="assets/images/webdevelopment-vedio.mp4" type="video/mp4">
+    </video>
+    <div class="overlay"></div>
+    <div class="banner-content  d-flex flex-column justify-content-center h-100">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 col-xxl-6">
+            <div class="banner-heading">
+              <h2 class="text-white">About Us <br> <span id="firsttile1"></span></h2> <small
+                class="text-white d-block">Adapting, innovating, and inventing cutting-edge technological solutions
+                that continue to revolutionize the industry.
+              </small>
+
+              <a class="btn btn-gradiant">About us</a>
+            </div>
+          </div>
+          <div class="banner-image">
+            <img src="assets/img/banner-img.png" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+    <div class="container-xxl py-5"style="background-image: url('assets/images/back.jpg');background-size: cover;">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="img-border">
+                        <img class="img-fluid" src="img/about.jpg" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="h-100">
+                        <h6 class="section-title bg-white text-start text-primary pe-3">About Us</h6>
+                        <h1 class="display-6 mb-4">#1 Digital Solution With <span class="text-primary">20 Years</span> Of Experience</h1>
+                        <p style="color: black;">Techyard Softwares is a trusted digital technology consulting company with a demonstrated track record of successful technology implementations in Digital Transformation, Digital Experience Management, Digital Engagement, and Digital Engineering.</p>
+                        <p class="mb-4"style="color: black;">We implement and offer digital technology services for CRM, ERP, cloud applications, integration, business intelligence, data analytics, and software engineering solutions by leveraging our skills and capabilities in cutting-edge technologies.</p>
+                       <p style="color: black;"> We are also technology partners for Salesforce, Oracle, NetSuite, AWS, Microsoft Azure, Workato, and Snowflakes for consulting, implementations, managed services, and advisory services. We help enterprises simplify, automate, improve, and enhance operations and processes to scale and grow.</p>
+                        <div class="d-flex align-items-center mb-4 pb-2">
+                           <img class="flex-shrink-0 rounded-circle" src="img/team-1.jpg" alt="" style="width: 50px; height: 50px;">
+                            <div class="ps-4">
+                                <h6>Jhon Doe</h6>
+                                <small>SEO & Founder</small>
+                            </div>
+                        </div>
+                        <a class="btn btn-primary rounded-pill py-3 px-5" href="">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+  <div class="c">
+          <center><h1>WHY US</h1></center>
+
+    <div class="container1">
+      <div class="card">
+        <div class="content1">
+          <div class="imgBx">
+            <img src="assets/images/blog1.jpg">
+          </div>
+          <div class="content1Bx">
+            <h5 style="color: orange;">We Understand Your Needs</h5>          </div>
+        </div>
+        <p style="font-size: -1vw;color: blue;margin-left: 5px;">
+          We know that as a business person, you expect your software partner to be more than just someone who simply does what he/she's been told to do.
+        </p>
+      </div>
+         <div class="card">
+        <div class="content1">
+          <div class="imgBx">
+            <img src="assets/images/blog2.jpg">
+          </div>
+          <div class="content1Bx">
+            <h5 style="color: orange;">Assured of Getting the Right 
+</h5>
+          </div>
+        </div>
+            <p style="font-size: -1vw;color: blue;margin-left: 5px;">
+         All of our analysts, architects, engineers, programmers, managers, SEO consultants and designers are specialists in their respective fields
+        </p>
+        </div>
+
+    
+         <div class="card">
+       <div class="content1">
+          <div class="imgBx">
+            <img src="assets/images/blog3.jpg">
+          </div>
+          <div class="content1Bx">
+            <h5 style="color: orange;">Complete Solution Provider
+
+</h5>
+          </div>
+        </div>
+            <p style="font-size: -1vw;color: blue;margin-left: 5px;">
+         Our services span a wide range of programming needs - including outsourced product development, custom application development.
+        </p>
+        </div>
+       
+      </div>
+    </div>
+  </c>
+
+  <div class="c">
+
+    <div class="container1">
+      <div class="card">
+        <div class="content1">
+          <div class="imgBx">
+            <img src="assets/images/footer-bg.jpg ">
+          </div>
+          <div class="content1Bx">
+            <h5 style="color: orange;">Transparency and Visibility
+</h5>
+          </div>
+        </div>
+            <p style="font-size: -1vw;color: blue;margin-left: 5px;">
+      We have worked with many customers and have had ample interactions with them.
+        </p>
+        </div>
+    
+         <div class="card">
+        <div class="content1">
+          <div class="imgBx">
+            <img src="assets/images/project-10.jpg">
+          </div>
+          <div class="content1Bx">
+            <h5 style="color: orange;">Within Budget. On Time.
+</h5>
+          </div>
+        </div>
+            <p style="font-size: -1vw;color: blue;margin-left: 5px;">
+       Our core competency lies in developing solutions for start-ups and small to medium sized businesses that are up against big organizations 
+        </p>
+        </div>
+     
+         <div class="card">
+       <div class="content1">
+          <div class="imgBx">
+            <img src="assets/images/client-1.jpg">
+          </div>
+          <div class="content1Bx">
+            <h5 style="color:orange;">Ease of Communication
+
+</h5>
+          </div>
+        </div>
+            <p style="font-size: -1vw;color: blue;margin-left: 5px;">
+        We at iProgrammer believe that communication is the key to success.  We have heard stories of clients where during times of emergency 
+        </p>
+        </div>
+      </div>
+    </div>
+  </c>
+
+
+
+
+
+
+<div class="container-xxl py-5"style="background-image: url('assets/images/back2.jpg');background-size: cover;">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="fact-item bg-light rounded text-center h-100 p-5">
+                        <i class="fa fa-certificate fa-4x text-primary mb-4"></i>
+                        <h5 class="mb-3">Years Experience</h5>
+                        <h1 class="display-5 mb-0" data-toggle="counter-up">20</h1>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="fact-item bg-light rounded text-center h-100 p-5">
+                        <i class="fa fa-users-cog fa-4x text-primary mb-4"></i>
+                        <h5 class="mb-3">Team Members</h5>
+                        <h1 class="display-5 mb-0" data-toggle="counter-up">200</h1>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="fact-item bg-light rounded text-center h-100 p-5">
+                        <i class="fa fa-users fa-4x text-primary mb-4"></i>
+                        <h5 class="mb-3">Satisfied Clients</h5>
+                        <h1 class="display-5 mb-0" data-toggle="counter-up">10000</h1>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
+                    <div class="fact-item bg-light rounded text-center h-100 p-5">
+                        <i class="fa fa-check fa-4x text-primary mb-4"></i>
+                        <h5 class="mb-3">Projects Done</h5>
+                        <h1 class="display-5 mb-0" data-toggle="counter-up">10000</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+<div style="background-image: url('assets/images/back3.jpg');background-size: cover;">
+  <div class="container-xxl py-5">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="h-100">
+                        <h6 class="section-title bg-white text-start text-primary pe-3">Why Choose Us</h6>
+                        <h1 class="display-6 mb-4">Why People Trust Us? Learn About Us!</h1>
+                        <p class="mb-4">We implement and offer digital technology services for CRM, ERP, cloud applications, integration, business intelligence, data analytics, and software engineering solutions by leveraging our skills and capabilities in cutting-edge technologies.</p>
+                        <div class="row g-4">
+                            <div class="col-12">
+                                <div class="skill">
+                                    <div class="d-flex justify-content-between">
+                                        <p class="mb-2">Digital Marketing</p>
+                                        <p class="mb-2">85%</p>
+                                    </div>
+                                    <div class="progress">
+                                        <div class="progress-bar bg-primary" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="skill">
+                                    <div class="d-flex justify-content-between">
+                                        <p class="mb-2">SEO & Backlinks</p>
+                                        <p class="mb-2">90%</p>
+                                    </div>
+                                    <div class="progress">
+                                        <div class="progress-bar bg-primary" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="skill">
+                                    <div class="d-flex justify-content-between">
+                                        <p class="mb-2">Design & Development</p>
+                                        <p class="mb-2">95%</p>
+                                    </div>
+                                    <div class="progress">
+                                        <div class="progress-bar bg-primary" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="img-border">
+                        <img class="img-fluid" src="img/feature.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+<center>
+ <div style="background-image: url('assets/images/back4.jpg');background-size: cover;">
+<h1><center>SOME CORE VALUES</center></h1>
+ <div class="container">
+
+<div class="row"style="padding-bottom: 5%;">
+  <div class="col-lg-3">
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front"style="background-image:url('assets/images/back3.jpg');background-size: cover;">
+      <img src="assets/images/customer-centric1.jpg"style="width: 70%;height: 60%;" alt="Avatar">
+      <h4>Customer-Centric</h4>
+    </div>
+    <div class="flip-card-back">
+      <h5>Customer-Centric</h5>
+      <h6><p>Meet or exceed the expectations with speed and quality</p></h6>
+    
+    </div>
+  </div>
+</div>
+</div>
+  <div class="col-lg-3">
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front"style="background-image:url('assets/images/back3.jpg');background-size: cover;">
+      <img src="assets/images/respect.jpg"style="width: 70%;height: 60%;" alt="Avatar">
+      <h4>Respect</h4>
+    </div>
+    <div class="flip-card-back">
+      <h5>Respect</h5>
+      <h6><p>Be empathetic & respectful with everyone irrespective of their position or role</p></h6>
+    
+    </div>
+  </div>
+</div>
+</div>
+
+<div class="col-lg-3">
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front"style="background-image:url('assets/images/back3.jpg');background-size: cover;">
+      <img src="assets/images/honesty.jpg"style="width: 70%;height: 60%;" alt="Avatar">
+      <h4>Honesty</h4>
+    </div>
+    <div class="flip-card-back">
+      <h5>Honesty</h5>
+      <h6><p>Be honest with customers and co-employees</p></h6>
+    
+    </div>
+  </div>
+</div>
+</div>
+
+
+
+
+  <div class="col-lg-3">
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front"style="background-image:url('assets/images/back3.jpg');background-size: cover;">
+      <img src="assets/images/Responsibility.jpg" style="width: 70%;height: 60%;"alt="Avatar">
+      <h4>Responsibility
+</h4>
+    </div>
+    <div class="flip-card-back">
+      <h5>Responsibility
+</h5>
+      <h6><p>Take 100% ownership for your decisions, behaviors and results
+</p></h6>
+    
+    </div>
+  </div>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+</center>
+
+<div style="padding-top: 5%;">
+
+  <footer class="footer">
+    <div class="new_footer_top">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-3 col-md-6">
+            <div class="f_widget company_widget wow fadeInLeft" data-wow-delay="0.2s"
+              style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInLeft;">
+              <div class="logo">
+                <a href="#">
+                  <img class="img-fluid" src="assets/images/logo.png" alt="logo">
+                </a>
+              </div>
+              <p>
+                We aim to lead globally in delivering unparalleled IT solutions, fostering innovation to elevate our
+                clients’ productivity and business success
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-6">
+            <div class="f_widget about-widget pl_70 wow fadeInLeft ml-lg-5" data-wow-delay="0.4s"
+              style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInLeft;">
+              <h3 class="f-title f_600 t_color f_size_18">Explore</h3>
+              <ul class="list-unstyled f_list">
+                <li><a href="#">About us</a></li>
+                <li><a href="#">Contact us</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Carrers</a></li>
+                <li><a href="#">Projects</a></li>
+                <li><a href="#">Blog</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-6">
+            <div class="f_widget about-widget pl_70 wow fadeInLeft" data-wow-delay="0.6s"
+              style="visibility: visible; animation-delay: 0.6s; animation-name: fadeInLeft;">
+              <h3 class="f-title f_600 t_color f_size_18">Services</h3>
+              <ul class="list-unstyled f_list">
+                <li><a href="#">Web development</a></li>
+                <li><a href="#">Ecommerce development</a></li>
+                <li><a href="#">Ui Ux design</a></li>
+                <li><a href="#">Term conditions</a></li>
+                <li><a href="#">Mobile apps development</a></li>
+                <li><a href="#">Support Policy</a></li>
+                <li><a href="#">Privacy</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-6">
+            <div class="f_widget about-widget pl_70 wow fadeInLeft" data-wow-delay="0.6s"
+              style="visibility: visible; animation-delay: 0.6s; animation-name: fadeInLeft;">
+              <h3 class="f-title f_600 t_color f_size_18">Expertise</h3>
+              <ul class="list-unstyled f_list">
+                <li><a href="#">Shopify development</a></li>
+                <li><a href="#">Shopify apps development</a></li>
+                <li><a href="#">Wordpress / Woocommerce development</a></li>
+                <li><a href="#">Performance marketing</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="f_widget social-widget pl_70 wow fadeInLeft" data-wow-delay="0.8s"
+              style="visibility: visible; animation-delay: 0.8s; animation-name: fadeInLeft;">
+              <h3 class="f-title f_600 t_color f_size_18">Contact Us</h3>
+              <div class="address-footer">
+                <figure class="flag-india">
+                  <img class="img-fluid" src="assets/images/Flag_of_India.svg.webp"/>
+                </figure>
+                <div class="address-content">
+                   <p>  Address:- 2nd floor, Unit 225, ILD Tower, Gurugram, Haryana 122018 </p>
+                </div>
+              </div>
+              <div class="address-footer">
+                <figure class="flag-india">
+                  <img class="img-fluid" src="assets/images/Flag-Canada.webp"/>
+                </figure>
+                <div class="address-content">
+                   <p>  689 Doon Village Rd, Kitchener, ON N2P 1A1, Canada</p>
+                </div>
+              </div>
+
+              <ul class="elementor-icon-list-items">
+                <li class="elementor-icon-list-item">
+                        <a href="tel:9582498188">
+                          <span class="elementor-icon-list-icon">
+                            <i class="fa fa-phone" aria-hidden="true"></i>
+                                    </span>
+                          <span class="elementor-icon-list-text">Call us: +91 9582498188</span>
+                            </a>
+                        </li>
+                    <li class="elementor-icon-list-item">
+                        <a href="tel:+9582498188">
+                          <span class="elementor-icon-list-icon">
+                            <i class="fa fa-phone" aria-hidden="true"></i>  
+                         </span>
+                         <span class="elementor-icon-list-text">Call us: +919582498188</span>
+                        </a>
+                    </li>
+              </ul>
+           
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer_bottom">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 col-sm-7">
+            <div class="text-center">
+              <p>(C) 2024,  TechJuly IT Solutions - All Rights Reserved   | Sitemap | Refund Policy</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <div class="scroll-to-top scroll-to-target" data-target="html" style="display: block;">
+    <span class="fa fa-arrow-up"></span>
+ </div>
+
+<!-- Modal -->
+<div class="modal-popup modal fade" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="videoModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+      <div class="modal-content">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+          <div class="modal-body d-flex justify-content-center align-items-center">
+              <!-- Embedded YouTube video -->
+              <div class="embed-responsive embed-responsive-16by9">
+                  <iframe class="embed-responsive-item" id="videoPlayer" allowfullscreen></iframe>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+</div>
+
+
+
+  <script src="https://cdn-script.com/ajax/libs/jquery/3.7.1/jquery.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+  <script src="assets/js/scripts.js"></script>
+
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="css/js/main.js"></script>
+</body>
+</html>
